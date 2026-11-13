@@ -39,4 +39,4 @@ Por último, se abre `notebooks/01_pipeline_etl.ipynb` y se ejecutan todas las c
 Tarda unos 2 minutos. El notebook detecta la carpeta del proyecto aunque se abra desde `notebooks/`.
 
 El pipeline es idempotente: se puede volver a ejecutar completo y produce exactamente las mismas tablas y archivos.
-La sección 7 del notebook lo demuestra.
+La sección 7 del notebook lo demuestra.# proyecto-inicial-analisis-datos
