@@ -1,0 +1,52 @@
+grupo,verificacion,violaciones,resultado
+Balance,clientes: raw = clean + cuarentena + duplicados,0,OK
+Balance,items: raw = clean + cuarentena + duplicados,0,OK
+Balance,pagos: raw = clean + cuarentena + duplicados,0,OK
+Balance,pedidos: raw = clean + cuarentena + duplicados,0,OK
+Balance,productos: raw = clean + cuarentena + duplicados,0,OK
+Errores críticos,clientes_clean: CP NULL o de 5 dígitos,0,OK
+Errores críticos,clientes_clean: campos críticos sin NULL,0,OK
+Errores críticos,clientes_clean: ciudad y UF estandarizadas,0,OK
+Errores críticos,clientes_clean: sin cadenas vacías,0,OK
+Errores críticos,items_clean: campos críticos sin NULL,0,OK
+Errores críticos,items_clean: precio > 0 y flete >= 0,0,OK
+Errores críticos,items_clean: sin cadenas vacías,0,OK
+Errores críticos,pagos_clean: campos críticos sin NULL,0,OK
+Errores críticos,pagos_clean: monto >= 0,0,OK
+Errores críticos,pagos_clean: método dentro del dominio,0,OK
+Errores críticos,pagos_clean: sin cadenas vacías,0,OK
+Errores críticos,pedidos_clean: campos críticos sin NULL,0,OK
+Errores críticos,pedidos_clean: estado dentro del dominio,0,OK
+Errores críticos,pedidos_clean: sin cadenas vacías,0,OK
+Errores críticos,pedidos_clean: sin secuencias de fechas imposibles,0,OK
+Errores críticos,productos_clean: campos críticos sin NULL,0,OK
+Errores críticos,productos_clean: categoría del catálogo y traducida,0,OK
+Errores críticos,productos_clean: sin cadenas vacías,0,OK
+Integridad,items_clean -> pedidos_clean,0,OK
+Integridad,items_clean -> productos_clean,0,OK
+Integridad,pagos_clean -> pedidos_clean,0,OK
+Integridad,pedidos_clean -> clientes_clean,0,OK
+Tipos,"items_clean.freight_value es DECIMAL(10,2)",0,OK
+Tipos,items_clean.order_item_id es INTEGER,0,OK
+Tipos,"items_clean.price es DECIMAL(10,2)",0,OK
+Tipos,items_clean.shipping_limit_date es TIMESTAMP,0,OK
+Tipos,pagos_clean.payment_installments es INTEGER,0,OK
+Tipos,pagos_clean.payment_sequential es INTEGER,0,OK
+Tipos,"pagos_clean.payment_value es DECIMAL(10,2)",0,OK
+Tipos,pedidos_clean.order_approved_at es TIMESTAMP,0,OK
+Tipos,pedidos_clean.order_delivered_carrier_date es TIMESTAMP,0,OK
+Tipos,pedidos_clean.order_delivered_customer_date es TIMESTAMP,0,OK
+Tipos,pedidos_clean.order_estimated_delivery_date es TIMESTAMP,0,OK
+Tipos,pedidos_clean.order_purchase_timestamp es TIMESTAMP,0,OK
+Tipos,productos_clean.product_description_lenght es INTEGER,0,OK
+Tipos,productos_clean.product_height_cm es INTEGER,0,OK
+Tipos,productos_clean.product_length_cm es INTEGER,0,OK
+Tipos,productos_clean.product_name_lenght es INTEGER,0,OK
+Tipos,productos_clean.product_photos_qty es INTEGER,0,OK
+Tipos,productos_clean.product_weight_g es INTEGER,0,OK
+Tipos,productos_clean.product_width_cm es INTEGER,0,OK
+Unicidad,clientes_clean: clave (customer_id) única,0,OK
+Unicidad,"items_clean: clave (order_id, order_item_id) única",0,OK
+Unicidad,"pagos_clean: clave (order_id, payment_sequential) única",0,OK
+Unicidad,pedidos_clean: clave (order_id) única,0,OK
+Unicidad,productos_clean: clave (product_id) única,0,OK

@@ -1,0 +1,41 @@
+regla,tabla,descripcion,registros_afectados
+R01,clientes,Cliente duplicado,50
+R01,items,Ítem duplicado (mismo pedido y número de ítem),80
+R01,pagos,Pago duplicado,40
+R01,pedidos,Pedido duplicado con el estado en MAYÚSCULAS (solo se detecta por clave),20
+R01,pedidos,Pedido duplicado exacto,60
+R01,productos,Producto duplicado,30
+R02,pagos,Monto de pago vacío (campo crítico),10
+R03,clientes,Ciudad con mayúsculas o espacios,300
+R03,clientes,Ciudad con tilde ('são paulo'),138
+R03,clientes,Estado (UF) en minúsculas o con espacios,200
+R03,pedidos,Estado con espacios o mayúsculas,300
+R03,productos,Categoría con mayúsculas o espacios,195
+R03,productos,Categoría con tildes,165
+R04,items,Precio con coma decimal,40
+R04,items,Precio no numérico,12
+R04,pagos,Monto con coma decimal,30
+R04,pedidos,Fecha de compra en formato dd/mm/aaaa,40
+R04,pedidos,Fecha de compra imposible o texto,12
+R04,productos,Peso no numérico,10
+R05,pedidos,Entrega al cliente anterior a la compra,39
+R05,pedidos,Fecha estimada de entrega anterior a la compra,20
+R06,items,Flete negativo,30
+R06,items,Precio igual a cero,30
+R06,items,Precio negativo,30
+R08,productos,Categoría con espacios o guiones en lugar de guion bajo,141
+R09,items,Ítem de un pedido inexistente,20
+R09,items,Ítem de un producto inexistente,30
+R09,pagos,Pago de un pedido inexistente,20
+R09,pedidos,Pedido de un cliente inexistente,30
+R10,pedidos,Pedido 'delivered' sin fecha de entrega,30
+R10,pedidos,Pedido entregado marcado como cancelado,39
+R11,clientes,Código postal inválido,15
+R11,clientes,Código postal sin el cero inicial (como lo deja Excel),289
+R13,pagos,Método de pago desconocido,15
+R13,pagos,Método de pago escrito de otra forma,400
+R14,clientes,"Ciudad vacía, con espacios, 'N/A' o 'NULL'",40
+R14,pagos,Método de pago vacío o con espacios,10
+R14,pedidos,Estado del pedido en blanco,10
+R14,pedidos,"Fecha de aprobación vacía, con espacios, 'N/A' o 'null'",40
+R14,productos,"Categoría vacía, con espacios o 'N/A'",30

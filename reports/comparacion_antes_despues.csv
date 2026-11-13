@@ -1,0 +1,43 @@
+regla,tabla,evaluados_antes,invalidos_antes,pct_antes,evaluados_despues,invalidos_despues,pct_despues,resultado,politica
+M01 Completitud,clientes,497455,40,0.01,497205,15,0.0,reducido,Porcentaje de celdas sin dato (NULL o vacías)
+M01 Completitud,items,789110,0,0.0,786653,0,0.0,resuelto,Porcentaje de celdas sin dato (NULL o vacías)
+M01 Completitud,pagos,519630,20,0.0,518765,0,0.0,resuelto,Porcentaje de celdas sin dato (NULL o vacías)
+M01 Completitud,pedidos,796168,4991,0.63,794720,4975,0.63,reducido,Porcentaje de celdas sin dato (NULL o vacías)
+M01 Completitud,productos,296829,2486,0.84,296559,1848,0.62,reducido,Porcentaje de celdas sin dato (NULL o vacías)
+R01 Duplicados,clientes,99491,50,0.05,99441,0,0.0,resuelto,Corregir: se conserva un registro por clave de negocio (el más completo)
+R01 Duplicados,items,112730,80,0.07,112379,0,0.0,resuelto,Corregir: se conserva un registro por clave de negocio (el más completo)
+R01 Duplicados,pagos,103926,40,0.04,103753,0,0.0,resuelto,Corregir: se conserva un registro por clave de negocio (el más completo)
+R01 Duplicados,pedidos,99521,80,0.08,99340,0,0.0,resuelto,Corregir: se conserva un registro por clave de negocio (el más completo)
+R01 Duplicados,productos,32981,30,0.09,32951,0,0.0,resuelto,Corregir: se conserva un registro por clave de negocio (el más completo)
+R02 Valores nulos,clientes,99491,0,0.0,99441,0,0.0,resuelto,Cuarentena si falta un campo crítico; imputar ciudad y categoría; conservar el resto
+R02 Valores nulos,items,112730,0,0.0,112379,0,0.0,resuelto,Cuarentena si falta un campo crítico; imputar ciudad y categoría; conservar el resto
+R02 Valores nulos,pagos,103926,10,0.01,103753,0,0.0,resuelto,Cuarentena si falta un campo crítico; imputar ciudad y categoría; conservar el resto
+R02 Valores nulos,pedidos,99521,0,0.0,99340,0,0.0,resuelto,Cuarentena si falta un campo crítico; imputar ciudad y categoría; conservar el resto
+R02 Valores nulos,productos,32981,0,0.0,32951,0,0.0,resuelto,Cuarentena si falta un campo crítico; imputar ciudad y categoría; conservar el resto
+R03 Estandarización de texto,clientes,99491,638,0.64,99441,0,0.0,resuelto,"Corregir: TRIM, minúsculas (UF en mayúsculas) y sin tildes"
+R03 Estandarización de texto,pagos,103926,286,0.28,103753,0,0.0,resuelto,"Corregir: TRIM, minúsculas (UF en mayúsculas) y sin tildes"
+R03 Estandarización de texto,pedidos,99521,320,0.32,99340,0,0.0,resuelto,"Corregir: TRIM, minúsculas (UF en mayúsculas) y sin tildes"
+R03 Estandarización de texto,productos,32981,360,1.09,32951,0,0.0,resuelto,"Corregir: TRIM, minúsculas (UF en mayúsculas) y sin tildes"
+R04 Tipos de datos,items,112730,12,0.01,112379,0,0.0,resuelto,Convertir; valor crítico no convertible -> cuarentena; no crítico -> NULL
+R04 Tipos de datos,pagos,103926,0,0.0,103753,0,0.0,resuelto,Convertir; valor crítico no convertible -> cuarentena; no crítico -> NULL
+R04 Tipos de datos,pedidos,99521,12,0.01,99340,0,0.0,resuelto,Convertir; valor crítico no convertible -> cuarentena; no crítico -> NULL
+R04 Tipos de datos,productos,32981,10,0.03,32951,0,0.0,resuelto,Convertir; valor crítico no convertible -> cuarentena; no crítico -> NULL
+R05 Fechas inconsistentes,pedidos,99521,249,0.25,99340,189,0.19,reducido,Cuarentena si la secuencia es imposible; marcar desfases de registro
+R06 Precios inválidos,items,112730,90,0.08,112379,0,0.0,resuelto,"Cuarentena: precio <= 0, flete < 0 o pago < 0"
+R06 Precios inválidos,pagos,103926,0,0.0,103753,0,0.0,resuelto,"Cuarentena: precio <= 0, flete < 0 o pago < 0"
+R07 Valores atípicos (IQR),items.freight_value,112730,12167,10.79,112379,12107,10.77,reducido,Conservar y marcar: un atípico no es necesariamente un error
+R07 Valores atípicos (IQR),items.price,112718,8443,7.49,112379,8412,7.49,reducido,Conservar y marcar: un atípico no es necesariamente un error
+R07 Valores atípicos (IQR),pagos.payment_value,103916,7990,7.69,103753,7976,7.69,reducido,Conservar y marcar: un atípico no es necesariamente un error
+R08 Categorías,productos,32981,595,1.8,32951,0,0.0,resuelto,Corregir con catálogo de correspondencias
+R09 Integridad referencial,items,112730,50,0.04,112379,0,0.0,resuelto,"Cuarentena de huérfanos y, en cascada, de hijos de pedidos en cuarentena"
+R09 Integridad referencial,pagos,103926,20,0.02,103753,0,0.0,resuelto,"Cuarentena de huérfanos y, en cascada, de hijos de pedidos en cuarentena"
+R09 Integridad referencial,pedidos,99521,30,0.03,99340,0,0.0,resuelto,"Cuarentena de huérfanos y, en cascada, de hijos de pedidos en cuarentena"
+R10 Estados de pedido,pedidos,99521,94,0.09,99340,94,0.09,conservado y marcado,Conservar y marcar contradicciones entre estado y fechas
+R11 Códigos postales,clientes,99491,304,0.31,99441,15,0.02,reducido,LPAD a 5 dígitos si falta el cero inicial; inválido -> NULL y marcado
+R12 Pagos vs ítems,pedidos,98630,392,0.4,98413,279,0.28,reducido,Conservar y marcar pedidos con diferencia mayor a la tolerancia
+R13 Métodos de pago,pagos,103926,428,0.41,103753,28,0.03,reducido,Normalizar con CASE; valores desconocidos -> desconocido y marcado
+R14 Cadenas vacías,clientes,99491,40,0.04,99441,0,0.0,resuelto,"Corregir: '', espacios y textos tipo N/A pasan a NULL"
+R14 Cadenas vacías,items,112730,0,0.0,112379,0,0.0,resuelto,"Corregir: '', espacios y textos tipo N/A pasan a NULL"
+R14 Cadenas vacías,pagos,103926,20,0.02,103753,0,0.0,resuelto,"Corregir: '', espacios y textos tipo N/A pasan a NULL"
+R14 Cadenas vacías,pedidos,99521,50,0.05,99340,0,0.0,resuelto,"Corregir: '', espacios y textos tipo N/A pasan a NULL"
+R14 Cadenas vacías,productos,32981,30,0.09,32951,0,0.0,resuelto,"Corregir: '', espacios y textos tipo N/A pasan a NULL"

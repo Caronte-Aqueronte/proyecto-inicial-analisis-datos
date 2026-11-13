@@ -1,0 +1,14 @@
+tabla,motivo,registros
+items,"R04 price no convertible a DECIMAL(10,2)",12
+items,R06 flete negativo,30
+items,R06 precio menor o igual a cero,60
+items,R09 pedido en cuarentena,119
+items,R09 pedido inexistente,20
+items,R09 producto inexistente,30
+pagos,R02 campo crítico nulo,10
+pagos,R09 pedido en cuarentena,103
+pagos,R09 pedido inexistente,20
+pedidos,R04 order_purchase_timestamp no convertible a TIMESTAMP,12
+pedidos,R05 entrega al cliente anterior a la compra,39
+pedidos,R05 fecha estimada anterior a la compra,20
+pedidos,R09 cliente inexistente,30

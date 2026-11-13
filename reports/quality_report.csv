@@ -1,0 +1,86 @@
+nombre_regla,tabla_evaluada,etapa,registros_evaluados,registros_invalidos,porcentaje_error,politica,fecha_ejecucion
+M01 Completitud,clientes,antes,497455,40,0.01,Porcentaje de celdas sin dato (NULL o vacías),2026-11-11 01:04:49.165061
+M01 Completitud,clientes,despues,497205,15,0.0,Porcentaje de celdas sin dato (NULL o vacías),2026-11-11 01:04:57.539546
+M01 Completitud,items,antes,789110,0,0.0,Porcentaje de celdas sin dato (NULL o vacías),2026-11-11 01:04:48.814564
+M01 Completitud,items,despues,786653,0,0.0,Porcentaje de celdas sin dato (NULL o vacías),2026-11-11 01:04:57.114683
+M01 Completitud,pagos,antes,519630,20,0.0,Porcentaje de celdas sin dato (NULL o vacías),2026-11-11 01:04:49.481021
+M01 Completitud,pagos,despues,518765,0,0.0,Porcentaje de celdas sin dato (NULL o vacías),2026-11-11 01:04:57.809516
+M01 Completitud,pedidos,antes,796168,4991,0.63,Porcentaje de celdas sin dato (NULL o vacías),2026-11-11 01:04:48.274039
+M01 Completitud,pedidos,despues,794720,4975,0.63,Porcentaje de celdas sin dato (NULL o vacías),2026-11-11 01:04:56.432024
+M01 Completitud,productos,antes,296829,2486,0.84,Porcentaje de celdas sin dato (NULL o vacías),2026-11-11 01:04:49.706245
+M01 Completitud,productos,despues,296559,1848,0.62,Porcentaje de celdas sin dato (NULL o vacías),2026-11-11 01:04:58.023589
+R01 Duplicados,clientes,antes,99491,50,0.05,Corregir: se conserva un registro por clave de negocio (el más completo),2026-11-11 01:04:30.545369
+R01 Duplicados,clientes,despues,99441,0,0.0,Corregir: se conserva un registro por clave de negocio (el más completo),2026-11-11 01:04:53.206379
+R01 Duplicados,items,antes,112730,80,0.07,Corregir: se conserva un registro por clave de negocio (el más completo),2026-11-11 01:04:30.454116
+R01 Duplicados,items,despues,112379,0,0.0,Corregir: se conserva un registro por clave de negocio (el más completo),2026-11-11 01:04:53.130852
+R01 Duplicados,pagos,antes,103926,40,0.04,Corregir: se conserva un registro por clave de negocio (el más completo),2026-11-11 01:04:30.628385
+R01 Duplicados,pagos,despues,103753,0,0.0,Corregir: se conserva un registro por clave de negocio (el más completo),2026-11-11 01:04:53.28114
+R01 Duplicados,pedidos,antes,99521,80,0.08,Corregir: se conserva un registro por clave de negocio (el más completo),2026-11-11 01:04:30.328764
+R01 Duplicados,pedidos,despues,99340,0,0.0,Corregir: se conserva un registro por clave de negocio (el más completo),2026-11-11 01:04:53.022718
+R01 Duplicados,productos,antes,32981,30,0.09,Corregir: se conserva un registro por clave de negocio (el más completo),2026-11-11 01:04:30.736553
+R01 Duplicados,productos,despues,32951,0,0.0,Corregir: se conserva un registro por clave de negocio (el más completo),2026-11-11 01:04:53.348429
+R02 Valores nulos,clientes,antes,99491,0,0.0,Cuarentena si falta un campo crítico; imputar ciudad y categoría; conservar el resto,2026-11-11 01:04:36.509521
+R02 Valores nulos,clientes,despues,99441,0,0.0,Cuarentena si falta un campo crítico; imputar ciudad y categoría; conservar el resto,2026-11-11 01:04:54.122472
+R02 Valores nulos,items,antes,112730,0,0.0,Cuarentena si falta un campo crítico; imputar ciudad y categoría; conservar el resto,2026-11-11 01:04:35.98051
+R02 Valores nulos,items,despues,112379,0,0.0,Cuarentena si falta un campo crítico; imputar ciudad y categoría; conservar el resto,2026-11-11 01:04:53.78939
+R02 Valores nulos,pagos,antes,103926,10,0.01,Cuarentena si falta un campo crítico; imputar ciudad y categoría; conservar el resto,2026-11-11 01:04:36.830447
+R02 Valores nulos,pagos,despues,103753,0,0.0,Cuarentena si falta un campo crítico; imputar ciudad y categoría; conservar el resto,2026-11-11 01:04:54.281786
+R02 Valores nulos,pedidos,antes,99521,0,0.0,Cuarentena si falta un campo crítico; imputar ciudad y categoría; conservar el resto,2026-11-11 01:04:35.584306
+R02 Valores nulos,pedidos,despues,99340,0,0.0,Cuarentena si falta un campo crítico; imputar ciudad y categoría; conservar el resto,2026-11-11 01:04:53.505867
+R02 Valores nulos,productos,antes,32981,0,0.0,Cuarentena si falta un campo crítico; imputar ciudad y categoría; conservar el resto,2026-11-11 01:04:37.363112
+R02 Valores nulos,productos,despues,32951,0,0.0,Cuarentena si falta un campo crítico; imputar ciudad y categoría; conservar el resto,2026-11-11 01:04:54.55567
+R03 Estandarización de texto,clientes,antes,99491,638,0.64,"Corregir: TRIM, minúsculas (UF en mayúsculas) y sin tildes",2026-11-11 01:04:26.537147
+R03 Estandarización de texto,clientes,despues,99441,0,0.0,"Corregir: TRIM, minúsculas (UF en mayúsculas) y sin tildes",2026-11-11 01:04:51.631176
+R03 Estandarización de texto,pagos,antes,103926,286,0.28,"Corregir: TRIM, minúsculas (UF en mayúsculas) y sin tildes",2026-11-11 01:04:26.745835
+R03 Estandarización de texto,pagos,despues,103753,0,0.0,"Corregir: TRIM, minúsculas (UF en mayúsculas) y sin tildes",2026-11-11 01:04:51.788987
+R03 Estandarización de texto,pedidos,antes,99521,320,0.32,"Corregir: TRIM, minúsculas (UF en mayúsculas) y sin tildes",2026-11-11 01:04:26.437605
+R03 Estandarización de texto,pedidos,despues,99340,0,0.0,"Corregir: TRIM, minúsculas (UF en mayúsculas) y sin tildes",2026-11-11 01:04:51.564022
+R03 Estandarización de texto,productos,antes,32981,360,1.09,"Corregir: TRIM, minúsculas (UF en mayúsculas) y sin tildes",2026-11-11 01:04:26.670006
+R03 Estandarización de texto,productos,despues,32951,0,0.0,"Corregir: TRIM, minúsculas (UF en mayúsculas) y sin tildes",2026-11-11 01:04:51.730638
+R04 Tipos de datos,items,antes,112730,12,0.01,Convertir; valor crítico no convertible -> cuarentena; no crítico -> NULL,2026-11-11 01:04:27.912482
+R04 Tipos de datos,items,despues,112379,0,0.0,Convertir; valor crítico no convertible -> cuarentena; no crítico -> NULL,2026-11-11 01:04:52.423623
+R04 Tipos de datos,pagos,antes,103926,0,0.0,Convertir; valor crítico no convertible -> cuarentena; no crítico -> NULL,2026-11-11 01:04:28.162169
+R04 Tipos de datos,pagos,despues,103753,0,0.0,Convertir; valor crítico no convertible -> cuarentena; no crítico -> NULL,2026-11-11 01:04:52.739827
+R04 Tipos de datos,pedidos,antes,99521,12,0.01,Convertir; valor crítico no convertible -> cuarentena; no crítico -> NULL,2026-11-11 01:04:27.322152
+R04 Tipos de datos,pedidos,despues,99340,0,0.0,Convertir; valor crítico no convertible -> cuarentena; no crítico -> NULL,2026-11-11 01:04:51.856126
+R04 Tipos de datos,productos,antes,32981,10,0.03,Convertir; valor crítico no convertible -> cuarentena; no crítico -> NULL,2026-11-11 01:04:28.31486
+R04 Tipos de datos,productos,despues,32951,0,0.0,Convertir; valor crítico no convertible -> cuarentena; no crítico -> NULL,2026-11-11 01:04:52.898753
+R05 Fechas inconsistentes,pedidos,antes,99521,249,0.25,Cuarentena si la secuencia es imposible; marcar desfases de registro,2026-11-11 01:04:39.311801
+R05 Fechas inconsistentes,pedidos,despues,99340,189,0.19,Cuarentena si la secuencia es imposible; marcar desfases de registro,2026-11-11 01:04:54.989586
+R06 Precios inválidos,items,antes,112730,90,0.08,"Cuarentena: precio <= 0, flete < 0 o pago < 0",2026-11-11 01:04:41.718273
+R06 Precios inválidos,items,despues,112379,0,0.0,"Cuarentena: precio <= 0, flete < 0 o pago < 0",2026-11-11 01:04:55.330812
+R06 Precios inválidos,pagos,antes,103926,0,0.0,"Cuarentena: precio <= 0, flete < 0 o pago < 0",2026-11-11 01:04:41.817497
+R06 Precios inválidos,pagos,despues,103753,0,0.0,"Cuarentena: precio <= 0, flete < 0 o pago < 0",2026-11-11 01:04:55.448364
+R07 Valores atípicos (IQR),items.freight_value,antes,112730,12167,10.79,Conservar y marcar: un atípico no es necesariamente un error,2026-11-11 01:04:43.503836
+R07 Valores atípicos (IQR),items.freight_value,despues,112379,12107,10.77,Conservar y marcar: un atípico no es necesariamente un error,2026-11-11 01:04:55.973202
+R07 Valores atípicos (IQR),items.price,antes,112718,8443,7.49,Conservar y marcar: un atípico no es necesariamente un error,2026-11-11 01:04:43.409038
+R07 Valores atípicos (IQR),items.price,despues,112379,8412,7.49,Conservar y marcar: un atípico no es necesariamente un error,2026-11-11 01:04:55.789956
+R07 Valores atípicos (IQR),pagos.payment_value,antes,103916,7990,7.69,Conservar y marcar: un atípico no es necesariamente un error,2026-11-11 01:04:43.575376
+R07 Valores atípicos (IQR),pagos.payment_value,despues,103753,7976,7.69,Conservar y marcar: un atípico no es necesariamente un error,2026-11-11 01:04:56.081431
+R08 Categorías,productos,antes,32981,595,1.8,Corregir con catálogo de correspondencias,2026-11-11 01:04:38.074148
+R08 Categorías,productos,despues,32951,0,0.0,Corregir con catálogo de correspondencias,2026-11-11 01:04:54.672728
+R09 Integridad referencial,items,antes,112730,50,0.04,"Cuarentena de huérfanos y, en cascada, de hijos de pedidos en cuarentena",2026-11-11 01:04:42.30373
+R09 Integridad referencial,items,despues,112379,0,0.0,"Cuarentena de huérfanos y, en cascada, de hijos de pedidos en cuarentena",2026-11-11 01:04:55.622718
+R09 Integridad referencial,pagos,antes,103926,20,0.02,"Cuarentena de huérfanos y, en cascada, de hijos de pedidos en cuarentena",2026-11-11 01:04:42.391211
+R09 Integridad referencial,pagos,despues,103753,0,0.0,"Cuarentena de huérfanos y, en cascada, de hijos de pedidos en cuarentena",2026-11-11 01:04:55.71443
+R09 Integridad referencial,pedidos,antes,99521,30,0.03,"Cuarentena de huérfanos y, en cascada, de hijos de pedidos en cuarentena",2026-11-11 01:04:42.216058
+R09 Integridad referencial,pedidos,despues,99340,0,0.0,"Cuarentena de huérfanos y, en cascada, de hijos de pedidos en cuarentena",2026-11-11 01:04:55.52318
+R10 Estados de pedido,pedidos,antes,99521,94,0.09,Conservar y marcar contradicciones entre estado y fechas,2026-11-11 01:04:40.837873
+R10 Estados de pedido,pedidos,despues,99340,94,0.09,Conservar y marcar contradicciones entre estado y fechas,2026-11-11 01:04:55.197997
+R11 Códigos postales,clientes,antes,99491,304,0.31,LPAD a 5 dígitos si falta el cero inicial; inválido -> NULL y marcado,2026-11-11 01:04:34.967916
+R11 Códigos postales,clientes,despues,99441,15,0.02,LPAD a 5 dígitos si falta el cero inicial; inválido -> NULL y marcado,2026-11-11 01:04:53.405669
+R12 Pagos vs ítems,pedidos,antes,98630,392,0.4,Conservar y marcar pedidos con diferencia mayor a la tolerancia,2026-11-11 01:04:44.306583
+R12 Pagos vs ítems,pedidos,despues,98413,279,0.28,Conservar y marcar pedidos con diferencia mayor a la tolerancia,2026-11-11 01:04:56.248066
+R13 Métodos de pago,pagos,antes,103926,428,0.41,Normalizar con CASE; valores desconocidos -> desconocido y marcado,2026-11-11 01:04:38.585854
+R13 Métodos de pago,pagos,despues,103753,28,0.03,Normalizar con CASE; valores desconocidos -> desconocido y marcado,2026-11-11 01:04:54.8726
+R14 Cadenas vacías,clientes,antes,99491,40,0.04,"Corregir: '', espacios y textos tipo N/A pasan a NULL",2026-11-11 01:04:20.069782
+R14 Cadenas vacías,clientes,despues,99441,0,0.0,"Corregir: '', espacios y textos tipo N/A pasan a NULL",2026-11-11 01:04:50.897737
+R14 Cadenas vacías,items,antes,112730,0,0.0,"Corregir: '', espacios y textos tipo N/A pasan a NULL",2026-11-11 01:04:19.770016
+R14 Cadenas vacías,items,despues,112379,0,0.0,"Corregir: '', espacios y textos tipo N/A pasan a NULL",2026-11-11 01:04:50.397951
+R14 Cadenas vacías,pagos,antes,103926,20,0.02,"Corregir: '', espacios y textos tipo N/A pasan a NULL",2026-11-11 01:04:20.328862
+R14 Cadenas vacías,pagos,despues,103753,0,0.0,"Corregir: '', espacios y textos tipo N/A pasan a NULL",2026-11-11 01:04:51.197626
+R14 Cadenas vacías,pedidos,antes,99521,50,0.05,"Corregir: '', espacios y textos tipo N/A pasan a NULL",2026-11-11 01:04:19.269987
+R14 Cadenas vacías,pedidos,despues,99340,0,0.0,"Corregir: '', espacios y textos tipo N/A pasan a NULL",2026-11-11 01:04:49.805825
+R14 Cadenas vacías,productos,antes,32981,30,0.09,"Corregir: '', espacios y textos tipo N/A pasan a NULL",2026-11-11 01:04:20.578312
+R14 Cadenas vacías,productos,despues,32951,0,0.0,"Corregir: '', espacios y textos tipo N/A pasan a NULL",2026-11-11 01:04:51.41449
+R15 Validación final,todas,despues,51,0,0.0,Todas las verificaciones deben dar 0 violaciones,2026-11-11 01:04:59.164802
